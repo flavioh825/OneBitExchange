@@ -5,6 +5,10 @@ ruby '2.5.1'
 
 # Tests
 gem 'rspec-rails', '~> 3.5'
+# Call externals API
+gem 'rest-client'
+# Fake cals to API
+gem 'webmock'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
