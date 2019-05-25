@@ -3,11 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# Tests
+# Testing framework to Ruby on Rails as a drop-in alternative to its default testing framework
 gem 'rspec-rails', '~> 3.5'
-# Call externals API
+# A simple HTTP and REST client for Ruby
 gem 'rest-client'
-# Fake cals to API
+# WebMock allows stubbing HTTP requests and setting expectations on HTTP requests
 gem 'webmock'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
