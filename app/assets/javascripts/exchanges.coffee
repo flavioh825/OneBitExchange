@@ -1,5 +1,6 @@
 $(document).ready ->
-  $('form').submit ->
+  $('#amount').on 'keyup', (e) ->
+    e.preventDefault()
     if $('form').attr('action') == '/convert'
       if $('#amount').val() == ''
         $('#error-message').addClass('alert alert-danger')
