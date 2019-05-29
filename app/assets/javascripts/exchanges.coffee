@@ -1,6 +1,10 @@
 $(document).ready ->
   $('form').submit ->
     if $('form').attr('action') == '/convert'
+      if $('#amount').val() == ''
+        $('#error-message').addClass('alert alert-danger')
+        $('#error-message').html('Digite a quantidade.')
+        return false
       $.ajax '/convert',
         type: 'GET'
         dataType: 'json'
@@ -12,5 +16,5 @@ $(document).ready ->
         error: (jqXHR, textStatus, errorThrown) ->
           alert textStatus
         success: (data, text, jqXHR) ->
-          $('#result').val(data.value)
+          $('#result').html(data.value.toFixed 2)
       return false
