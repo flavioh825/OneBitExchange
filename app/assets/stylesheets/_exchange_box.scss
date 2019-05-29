@@ -4,10 +4,23 @@
     border: 0;
 
     .card-header{
-      background-color: #878d99;
+      background-color: #007bff;
       border-radius: 0;
       color: white;
       font-weight: 700;
+
+      input {
+        background-color: #007bff;
+        border: solid #fff 2px;
+        height: 60px;
+        font-size: 15pt;
+        color: #fff;
+      }
+
+      input::placeholder {
+        color: #fff;
+      }
+
     }
 
     .card-block{
@@ -24,6 +37,13 @@
         border-color: #5bc0de;
         border-radius: 0;
       }
+    }
+
+    .card-footer {
+      background-color: #007bff;
+      border-radius: 0;
+      color: white;
+      font-weight: 700;
     }
   }
 }
