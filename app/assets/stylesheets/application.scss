@@ -1,3 +1,10 @@
 @import "bootstrap/dist/css/bootstrap";
+// fontawesome
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+// system
 @import "exchanges";
 @import "_exchange_box";
