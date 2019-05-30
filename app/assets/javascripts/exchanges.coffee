@@ -1,7 +1,5 @@
 $(document).ready ->
   convert = ->
-    alert "Ola q tal"
-    return false
     $.ajax '/convert',
         type: 'GET'
         dataType: 'json'
