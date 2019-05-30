@@ -8,5 +8,8 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "tether": "^1.4.6"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2"
   }
 }

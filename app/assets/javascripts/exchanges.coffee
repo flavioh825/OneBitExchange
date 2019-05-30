@@ -19,3 +19,6 @@ $(document).ready ->
         success: (data, text, jqXHR) ->
           $('#result').html(data.value.toFixed 2)
       return false
+
+  $('.invert').click ->
+    alert "olá"
