@@ -22,7 +22,7 @@ RSpec.configure do |config|
   config.before(:each) do
     stub_request(:get, /rest.coinapi.io/)
     .with(headers: {
-      'Accept' => '*/*'
+      "X-CoinAPI-Key" => ''
     }).to_return(status: 200, body: '
       {
         "time": "2019-08-11T14:31:18.3150000Z",
