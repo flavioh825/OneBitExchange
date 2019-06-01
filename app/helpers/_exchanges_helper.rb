@@ -7,4 +7,13 @@ module ExchangesHelper
       'THB', 'TRY', 'USD', 'ZAR'
     ]
   end
+
+  def cryptocoin_list
+    [
+      'BTC', 'ETH', 'XRP', 'BCH', 'EOS', 'LTC', 'BNB', 'USDT', 'XLM', 'ADA',
+      'TRX', 'XMR', 'DASH', 'MIOTA', 'ATOM', 'XTZ', 'ETC', 'XEM', 'MKR',
+      'ONT', 'ZEC', 'NZD', 'BTG', 'CRO', 'BAT', 'VET', 'DOGE', 'LINK',
+      'USDC', 'BTT', 'OMG', 'QTUM'
+    ]
+  end
 end
