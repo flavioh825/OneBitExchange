@@ -13,13 +13,13 @@
           </div>
         </div>
         <div class="text-center btn-invert">
-          <button type="button" class="btn btn-primary invert" title="Inverter conversão"><i class="fas fa-retweet fa-2x"></i></button>
+          <button type="button" class="btn btn-primary invert" name="invert" title="Inverter conversão"><i class="fas fa-retweet fa-2x"></i></button>
         </div>
         <div class='destination_currency'>
           <div class='form-group'>
             <p class='title'>Moeda Pretendida</p>
             <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control currency', id: 'target_currency'%>
-            <%= select_tag 'target_currency', options_for_select(cryptocoin_list, 'BTC'), class: 'form-control cryptocoin', id: 'cryptocoin'%>
+            <%= select_tag 'cryptocoin', options_for_select(cryptocoin_list, 'BTC'), class: 'form-control cryptocoin', id: 'cryptocoin'%>
           </div>
         </div>
       <% end %>
