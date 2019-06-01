@@ -7,9 +7,9 @@ RSpec.describe "Cryptocoins", type: :request do
     end
 
     it 'returns http success' do
-      get '/convert', params: {
-                        source_currency: "BTC",
-                        target_currency: "BRL",
+      get '/cryptocoin_convert', params: {
+                        source_currency: "BRL",
+                        target_currency: "BTC",
                         amount: @amount
                       }
       expect(response).to  have_http_status(200)
