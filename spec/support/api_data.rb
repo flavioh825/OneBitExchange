@@ -20,8 +20,7 @@ RSpec.configure do |config|
     with(
       headers: {
       'Accept'=>'application/json',
-      'Accept-Encoding'=>'deflate, gzip',
-      'X-Coinapi-Key'=>'0C88EB15-8B69-4275-89E9-E40457B0C607'
+      'Accept-Encoding'=>'deflate, gzip'
       }).
     to_return(status: 200, body: '
     {
