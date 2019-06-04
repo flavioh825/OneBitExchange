@@ -1,8 +1,10 @@
 RSpec.configure do |config|
   config.before(:each) do
-    stub_request(:get, /rest.coinapi.io/)
+    stub_request(:get, "https://rest.coinapi.io/v1/exchangerate/BTC/USD")
     .with(headers: {
-      'Accept' => '*/*'
+      'Accept'=>'application/json',
+      'Accept-Encoding'=>'deflate, gzip',
+      'X-Coinapi-Key'=>Rails.application.credentials[Rails.env.to_sym][:cryptocoin_api_key]
     }).to_return(status: 200, body: '
       {
         "time": "2019-08-11T14:31:18.3150000Z",
