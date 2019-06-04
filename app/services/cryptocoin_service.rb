@@ -1,5 +1,4 @@
-require 'rest-client'
-require 'json'
+require 'coinapi_v1'
 
 class CryptocoinService
   def initialize(source_cryptocoin, target_cryptocoin, amount)
@@ -10,13 +9,11 @@ class CryptocoinService
 
   def perform
     begin
-      cryptocoin_api_url = Rails.application.credentials[Rails.env.to_sym][:cryptocoin_api_url]
       cryptocoin_api_key = Rails.application.credentials[Rails.env.to_sym][:cryptocoin_api_key]
-      url = "#{cryptocoin_api_url}v1/exchangerate/#{@source_cryptocoin}/#{@target_cryptocoin}"
-
-      res = RestClient.get url, headers={"X-CoinAPI-Key": cryptocoin_api_key}
-      value = JSON.parse(res.body)['rate'].to_f
-      value * @amount
+      coinapi = CoinAPIv1::Client.new(api_key: cryptocoin_api_key)
+      exchange_rate = coinapi.exchange_rates_get_specific_rate(asset_id_base: @source_cryptocoin,
+                                                              asset_id_quote: @target_cryptocoin)
+      exchange_rate[:rate] * @amount
     rescue RestClient::ExceptionWithResponse => e
       e.response
     end
